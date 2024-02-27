@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from "react";
-import HeroSlider from "react-slick";
 import axios from "axios";
-import { BiStar } from "react-icons/bi";
+import HeroSlider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// const ViewMore = () => {
-// let options={
-//   handler: () => {
-    
-//   }
-// }
-// };
+import { BiStar } from "react-icons/bi";
 
 const HeroCarousal = () => {
 
@@ -53,30 +45,30 @@ const HeroCarousal = () => {
         <HeroSlider {...settingsLg}>
           {
             images.map((image) => (
-              <div className="p-3">
-              <div className="shadow-2xl shadow-black relative rounded-xl">
-                <div className="w-fit h-96">
-                  <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
-                    alt="Movies Banner" className="w-full h-full rounded-md opacity-70" />
-                </div>
-
-                <div className="absolute bottom-0 ml-10 mb-8 items-center flex ">
-
-                  <div className="flex">
-                    <img src={`https://image.tmdb.org/t/p/original${image.poster_path}`}
-                      alt="{image.original_title}" className="w-36 rounded-xl drop-shadow-lg" />
+              <div className="p-3" key={image.id}>
+                <div className="shadow-2xl shadow-black relative rounded-xl">
+                  <div className="w-fit h-96">
+                    <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
+                      alt="Movies Banner" className="w-full h-full rounded-md opacity-70" />
                   </div>
 
-                  <div className="pl-4 h-14 text-white font-bold">
-                    <a className=" text-xl h-16 text-ellipsis overflow-hidden">{image.title}</a>
-                    <div className="flex items-center">
-                      <BiStar className="m-1" />
-                      {image.vote_average}
+                  <div className="absolute bottom-0 ml-10 mb-8 items-center flex ">
+
+                    <div className="flex">
+                      <img src={`https://image.tmdb.org/t/p/original${image.poster_path}`}
+                        alt={image.original_title} className="w-36 rounded-xl drop-shadow-lg" />
                     </div>
-                  <p className="text-sm w-96 h-16 text-ellipsis overflow-hidden ">{image.overview}</p>
+
+                    <div className="pl-4 h-14 text-white font-bold">
+                      <h1 className=" text-xl h-16 text-ellipsis overflow-hidden">{image.title}</h1>
+                      <div className="flex items-center">
+                        <BiStar className="m-1" />
+                        {image.vote_average}
+                      </div>
+                      <p className="text-sm w-96 h-16 text-ellipsis overflow-hidden ">{image.overview}</p>
+                    </div>
                   </div>
-                </div>
-              </div></div>
+                </div></div>
             ))
           }
         </HeroSlider>
@@ -86,7 +78,7 @@ const HeroCarousal = () => {
         <HeroSlider {...settings}>
           {
             images.map((image) => (
-              <div className="">
+              <div className="" key={image.id}>
                 <div className="w-full h-64 md:h-96 py-3">
                   <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
                     alt="Movies Banner" className="w-full h-full rounded-md opacity-70" />
@@ -100,7 +92,7 @@ const HeroCarousal = () => {
                   </div>
 
                   <div className="pl-4 h-14 text-white font-bold">
-                    <a>{image.title}</a>
+                    <p>{image.title}</p>
                     <div className="flex items-center">
                       <BiStar className="m-1" />
                       {image.vote_average}

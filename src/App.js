@@ -32,7 +32,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <DefaultHOC path="/" exact component={HomePage} />
+      <DefaultHOC path="" exact component={HomePage} />
       <MovieHOC path="/movie/:id" component={Movies} />
       <DefaultHOC path="/plays" component={Plays} />
       <MovieHOC path="/movie/:id/selection" component={Selection} />

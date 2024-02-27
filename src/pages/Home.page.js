@@ -3,18 +3,6 @@ import React, { useState, useEffect } from "react";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
 const HomePage = () => {
-  // DISCOVER MOVIES
-  const [DiscoverMovies, setDiscoverMovies] = useState([]);
-
-  useEffect(() => {
-    const requestDiscoverMovies = async () => {
-      const getDiscoverMovies = await axios.get("/discover/movie");
-      setDiscoverMovies(getDiscoverMovies.data.results);
-    };
-    requestDiscoverMovies();
-  }, []);
-
-  console.log({ DiscoverMovies });
 
   // POPULAR MOVIES
   const [popularMovies, setPopularMovies] = useState([]);
@@ -27,7 +15,7 @@ const HomePage = () => {
     requestPopularMovies();
   }, []);
 
-  console.log({ popularMovies });
+  // console.log({ popularMovies });
 
   // TOP-RATED MOVIES
   const [top_ratedMovies, setTopMovies] = useState([]);
@@ -40,7 +28,7 @@ const HomePage = () => {
     requestTopMovies();
   }, []);
 
-  console.log({ top_ratedMovies });
+  // console.log({ top_ratedMovies });
 
   // NOW_PLAYING MOVIES
   const [now_playingMovies, setNowPlayingMovies] = useState([]);
@@ -53,7 +41,7 @@ const HomePage = () => {
     requestNowPlayingMovies();
   }, []);
 
-  console.log({ now_playingMovies });
+  // console.log({ now_playingMovies });
 
   return (
     <>

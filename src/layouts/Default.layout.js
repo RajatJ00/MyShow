@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 //components
 import Navbar from "../components/Navbar/navbar.component";
-import HeroCarousal from "../components/HeroCarousal/HeroCarousal.component.js";
+import LazyLoading from "../components/LazyLoading/LazyLoading.component.js";
+const HeroCarousal = lazy(() => import("../components/HeroCarousal/HeroCarousal.component.js"));
 
 const DefaultLayout = (props) => {
   return (
     <>
-    <Navbar />
-    <HeroCarousal />
-    {props.children}
+      <Navbar />
+      <Suspense fallback={<LazyLoading />}>
+        <HeroCarousal />
+      </Suspense>
+      {props.children}
     </>
   );
 };

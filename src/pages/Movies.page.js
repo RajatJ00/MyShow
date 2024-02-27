@@ -104,7 +104,7 @@ const Movie = () => {
                            company.logo_path
                            &&
                            <span className="w-44 flex flex-col items-center justify-around mb-8 p-5 shadow-2xl rounded-3xl mr-2">
-                              <img className="aspect-square object-contain p-3" src={"https://image.tmdb.org/t/p/original" + company.logo_path} alt="Movie company logo" />
+                              <img className="aspect-square object-contain" src={"https://image.tmdb.org/t/p/original" + company.logo_path} alt="Movie company logo" />
                               <span className="text-base font-semibold">{company.name}</span>
                            </span>
                         }
