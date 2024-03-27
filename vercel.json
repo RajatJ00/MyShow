@@ -1,36 +1,8 @@
 {
     "rewrites": [
         {
-            "src": "/",
-            "dest":"/"
-        },
-        {
-            "src": "/movie/:id",
-            "dest":"/movie/:id"
-        },
-        {
-            "src": "/plays",
-            "dest": "/plays"
-        },
-        {
-            "src": "/movie/:id/selection",
-            "dest": "/movie/:id/selection"
-        },
-        {
-            "src": "/categories",
-            "dest": "/categories"
-        },
-        {
-            "src": "/tvshow",
-            "dest": "/tvshow"
-        },
-        {
-            "src": "/tv/:id",
-            "dest": "/tv/:id"
-        },
-        {
-            "src": "/search",
-            "dest": "/search"
+            "source": "/(.*)",
+            "destination": "/"
         }
     ]
 }
