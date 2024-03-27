@@ -1,5 +1,36 @@
 {
     "rewrites": [
-        { "source": "/(.*)", "destination": "/" }
+        {
+            "src": "/",
+            "dest":"/"
+        },
+        {
+            "src": "/movie/:id",
+            "dest":"/"
+        },
+        {
+            "src": "/plays",
+            "dest": "/"
+        },
+        {
+            "src": "/movie/:id/selection",
+            "dest": "/"
+        },
+        {
+            "src": "/categories",
+            "dest": "/"
+        },
+        {
+            "src": "/tvshow",
+            "dest": "/"
+        },
+        {
+            "src": "/tv/:id",
+            "dest": "/"
+        },
+        {
+            "src": "/search",
+            "dest": "/"
+        }
     ]
 }
