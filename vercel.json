@@ -3,6 +3,34 @@
         {
             "source": "/(.*)",
             "destination": "/"
+        },
+        {
+            "source": "/movie/:id",
+            "destination": "/movie/:id"
+        },
+        {
+            "source": "/plays",
+            "destination": "/plays"
+        },
+        {
+            "source": "/movie/:id/selection",
+            "destination": "/movie/:id/selection"
+        },
+        {
+            "source": "/categories",
+            "destination": "/categories"
+        },
+        {
+            "source": "tvshow",
+            "destination": "/tvshow"
+        },
+        {
+            "source": "/tv/:id",
+            "destination": "/tv/:id"
+        },
+        {
+            "source": "/search",
+            "destination": "/search"
         }
     ]
 }
