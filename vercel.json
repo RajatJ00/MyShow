@@ -1,36 +1,5 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        },
-        {
-            "source": "/movie/:id",
-            "destination": "api/movie/:id"
-        },
-        {
-            "source": "/plays",
-            "destination": "api/plays"
-        },
-        {
-            "source": "/movie/:id/selection",
-            "destination": "api/movie/:id/selection"
-        },
-        {
-            "source": "/categories",
-            "destination": "api/categories"
-        },
-        {
-            "source": "tvshow",
-            "destination": "api/tvshow"
-        },
-        {
-            "source": "/tv/:id",
-            "destination": "api/tv/:id"
-        },
-        {
-            "source": "/search",
-            "destination": "api/search"
-        }
+   "rewrites":  [
+       {"source": "/(.*)", "destination": "/"}
     ]
 }
